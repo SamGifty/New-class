@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,8 +7,10 @@ body {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .container img {
@@ -28,6 +29,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .logo {
@@ -65,7 +67,7 @@ body {
   left: 0;
   width: 100%;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero {
@@ -111,10 +113,13 @@ body {
   flex: 1 1 300px;
 }
 
-.features .container, .services-list, .blog-posts {
+.features .container,
+.services-list,
+.blog-posts {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 h2 {
@@ -142,11 +147,20 @@ h2 {
   justify-content: center;
 }
 
+.images img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border: 5px solid #fff;
+  border-radius: 15px;
+}
+
 .top {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  text-align: center;
 }
 
 .top img {
@@ -159,7 +173,8 @@ h2 {
 
 .tools-text {
   flex: 1 1 300px;
-  padding-right: 20px;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .project {
@@ -187,6 +202,10 @@ footer {
   padding: 20px;
   color: #aaa;
   font-size: 0.9rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
@@ -243,5 +262,13 @@ footer {
 
   h2 {
     font-size: 26px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .feature-box, .service, .post, .ppp {
+    padding: 15px;
   }
 }
