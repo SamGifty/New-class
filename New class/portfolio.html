@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam's | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #1e293b;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f87171;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li .btn {
+      background-color: #f87171;
+      padding: 8px 16px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('header-bg.jpg') no-repeat center/cover;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      object-fit: cover;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #f87171;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .section-title span {
+      display: block;
+      font-size: 1rem;
+      color: #f87171;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0 20px 60px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-container img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .btn.download {
+      background-color: #f87171;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .services {
+      padding: 40px 20px;
+      background-color: #1e293b;
+    }
+
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #0f172a;
+      padding: 20px;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      text-align: center;
+      width: 250px;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #f87171;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+    footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #1e293b;
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        padding: 20px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">The Sam's Designs</div>
+    <div class="hamburger" id="hamburger">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="tag.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#contact" class="btn contact">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img src="images/gifty.jpg" alt="sam" class="profile-pic">
+    <div class="hero-content">
+      <h1> Gifty Afia Sam</h1>
+      <p>A Creative Designer in UI/UX & A Full Stack Developer</p>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="section-title"><span>Discover</span> About Me</div>
+    <div class="about-container">
+      <img src="images/gifty.jpg" alt="sam">
+      <div class="about-text">
+        <p>My name is Gifty Afia Sam. I'm a Creative Designer in UI/UX and a  Full Stack Developer based in Ghana.  I’m very passionate and dedicated to my work. With 2 years experience as a professional Full Stack Developer, I have acquired the skills necessary to build great and premium websites.</p>
+        <div class="info-grid">
+          <p><strong>Name:</strong> Gifty Afia Sam</p>
+          <p><strong>Age:</strong> 20</p>
+          <p><strong>Phone:</strong> +233 594 78 31 46</p>
+          <p><strong>Address:</strong> Ghana</p>
+          <p><strong>Experience:</strong> 2Years</p>
+          <p><strong>Freelance:</strong> Available</p>
+          <p><strong>Skype:</strong> afia.sam</p>
+          <p><strong>Email:</strong> samgifty523@gmail.com</p>
+        </div>
+        <a href="#" class="btn download">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-title"><span>What I Do</span> My Services</div>
+    <div class="service-cards">
+      <div class="card">
+        <i class="icon">🎨</i>
+        <h3>Creative Design</h3>
+        <p>I offer UI/UX Design.</p>
+      </div>
+      <div class="card">
+        <i class="icon">🚀</i>
+        <h3>Main Focus</h3>
+        <p>A Full Stack Developer</p>
+      </div>
+      <div class="card">
+        <i class="icon">💻</i>
+        <h3>User Interface</h3>
+        <p>Flexiable at all times</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 The Sam Design's. All rights reserved.
+  </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

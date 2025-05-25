@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo"><i class="fa-brands fa-bluesky"></i>The Sam Design's</div>
+      <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="tag.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>CONTACT US</h1>
+  </header>
+
+  <div class="contact-section">
+    <div class="contact-info">
+      <div>
+        <h3>📧 Email Us</h3>
+        <a href="mailto:hello@example.com">sam@example.com</a>
+      </div>
+      <div>
+        <h3>📞 Call Us</h3>
+        <p>+233 511 222 3333</p>
+      </div>
+      <div>
+        <h3>Visit Us</h3>
+        <p>The Sam Design's / Accra</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Let's Work Together</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="Location" required />
+        <input type="date" required />
+        <input type="text" placeholder="Subject" required />
+        <textarea placeholder="Details" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="successMessage">Thank you! Your message has been sent successfully.</div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>"⭐️⭐️⭐️⭐️⭐️ Exceptional service from start to finish! Working with [The Sam Design's] has been a game-changer for our business..."</p>
+        <span>— Jordan M., Operations Manager, Acme Corp</span>
+      </div>
+      <div class="testimonial">
+        <p>"They solved problems we didn’t even know we had. [The Sam Design's] team overhauled our IT infrastructure..."</p>
+        <span>— Linda S., Head of IT, NovaTech Solutions</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The Sam Design's. All rights reserved.
+  </footer>
+
+  <script src="script.js">
+    const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  form.reset();
+  successMessage.style.display = 'block';
+  successMessage.classList.remove('fadeOut');
+  successMessage.classList.add('fadeIn');
+
+  setTimeout(() => {
+    successMessage.classList.remove('fadeIn');
+    successMessage.classList.add('fadeOut');
+    setTimeout(() => {
+      successMessage.style.display = 'none';
+    }, 1500);
+  }, 3000);
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sam agency</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background-color: #fff;
+      color: #000;
+    }
+    header, footer {
+      background-color: #1a1a1a;
+      color: white;
+    }
+    body.light-mode header,
+    body.light-mode footer {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+
+    h1{
+    background: linear-gradient(to right, #f81f01, #ee076e, #1ef1a5, #00f0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 70px;
+    }
+    .hero {
+      background: url('hero-image.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-in;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeIn 2s ease-in;
+    }
+    .gallery a img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery a img:hover {
+      transform: scale(1.05);
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+    }
+    body.light-mode nav a {
+      color: black;
+    }
+    .mobile-menu-button {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+    .mobile {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      animation: slideDown 0.3s ease forwards;
+    }
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+    .toggle-button {
+      background: hsl(0, 0%, 27%);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    button{
+      align-items: center;
+      height: 50px;
+      background-color: #ee076e;
+      color: white;
+      font-weight: bold;
+      margin-left: 200px;
+      border: 8px solid;
+      border-color: white;
+    }
+
+    button a{
+      list-style: none;
+      text-decoration: none;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .mobile-menu-button {
+        display: block;
+      }
+      .mobile-nav.active {
+        display: flex;
+      }
+      .footer-columns {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <header>
+    <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto;">
+      <h2><i class="fa-brands fa-bluesky"></i>The Sam Design's Gallery</h2>
+      <button class="mobile-menu-button" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      <nav id="desktop-nav">
+        <a href="Index.html">Home</a>
+        <a href="tag.html">Services</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+    
+      </nav>
+    </div>
+    <div id="mobile" class="mobile">
+      <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1><i class="fa-brands fa-bluesky"></i>The Sam Design's Gallery</h1>
+    <p>Home / Gallery</p>
+  </section>
+
+  <section class="section">
+    <h2>From Our Gallery</h2>
+    <div class="gallery">
+      <a href="img1.jpg"><img src="images/1ac993dd4209a445440dcef678cffc64.jpg" alt="Gallery Image 1"></a>
+      <a href="img2.jpg"><img src="images/65f840d316353_mobile.app.development.1920.1080.png" alt="Gallery Image 2"></a>
+      <a href="img3.jpg"><img src="images/b54de2139668309.Y3JvcCwyNjg0LDIxMDAsNTksMA.jpg" alt="Gallery Image 3"></a>
+      <a href="img4.jpg"><img src="images/What-Should-Be-Included-in-a-Website-Design-Package.jpg" alt="Gallery Image 4"></a>
+      <a href="img5.jpg"><img src="images/671fb168c83ffdbcd4494827_646bd4aa62192dce18beb4f9_reflect-ml-website-design-inspiration.jpeg" alt="Gallery Image 5"></a>
+      <a href="img6.jpg"><img src="images/download.jpg" alt="Gallery Image 6"></a>
+      <a href="img7.jpg"><img src="images/web-page-design-preview-42321.jpg" alt="Gallery Image 7"></a>
+      <a href="img8.jpg"><img src="images/how-to-create-a-website-feature-image.jpg" alt="Gallery Image 8"></a>
+      <a href="img9.jpg"><img src="images/671fb168c83ffdbcd4494842_646bd488064b5be1c49d8313_scale-machine-learning-website-design-inspiration.jpeg" alt="Gallery Image 9"></a>
+    </div>
+  </section>
+<button> <a href="portfolio.html">View Portfolio</a></button>
+  <footer>
+    &copy; 2025 The Sam Design's. All rights reserved.
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('light-mode');
+    }
+    function toggleMenu() {
+      document.getElementById('mobile-nav').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
